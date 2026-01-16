@@ -1,0 +1,155 @@
+:root {
+    /* --- Light Mode Palette --- */
+    --container-max: 1250px;
+    /* Slightly wider for modern feel */
+
+    --bg-body: #f8fafc;
+    /* Cool, clean gray-white */
+    --bg-surface: #ffffff;
+    --bg-surface-alt: #f1f5f9;
+    /* Subtle secondary background */
+    --bg-gradient: linear-gradient(135deg, #eef2ff, #fdf2f8);
+    /* Authentic Light Gradient */
+
+    --text-primary: #0f172a;
+    /* Slate-900: Sharper readability than generic black */
+    --text-secondary: #475569;
+    /* Slate-600 */
+    --text-muted: #94a3b8;
+    /* Slate-400 */
+
+    --primary-color: #6366f1;
+    /* Indigo-500 */
+    --primary-hover: #4f46e5;
+    /* Indigo-600 */
+
+    --accent-color: #ec4899;
+    /* Pink-500 */
+    --accent-hover: #db2777;
+    /* Pink-600 */
+
+    --border-color: #e2e8f0;
+    --border-hover: #cbd5e1;
+
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+    --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+/* --- Dark Mode Palette (Deep Midnight) --- */
+html.dark {
+    --bg-body: #0b1120;
+    /* Deep Midnight Blue - richer than flat black */
+    --bg-surface: #1e293b;
+    /* Slate-800 */
+    --bg-surface-alt: #0f172a;
+    /* Slate-900 */
+    --bg-gradient: linear-gradient(135deg, #0f172a, #1e293b);
+
+    --text-primary: #f8fafc;
+    /* Slate-50 - Ultra clear */
+    --text-secondary: #cbd5e1;
+    /* Slate-300 */
+    --text-muted: #64748b;
+    /* Slate-500 */
+
+    --primary-color: #818cf8;
+    /* Indigo-400 - Lighter for dark backgrounds */
+    --primary-hover: #6366f1;
+
+    --accent-color: #f472b6;
+    /* Pink-400 */
+
+    --border-color: #334155;
+    /* Slate-700 */
+    --border-hover: #475569;
+
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+    --shadow-card: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-primary);
+    line-height: 1.7;
+    /* Improvement for readability */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s ease;
+}
+
+.container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 24px;
+    /* Slightly more padding */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-primary);
+    margin-top: 0;
+    margin-bottom: 0.75em;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+p {
+    color: var(--text-secondary);
+    margin-bottom: 1.25em;
+}
+
+/* UI Elements */
+input,
+textarea {
+    background-color: var(--bg-surface);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-body);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 99px;
+    border: 2px solid var(--bg-body);
+    /* Creates padding effect */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+}

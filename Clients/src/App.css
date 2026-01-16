@@ -1,0 +1,54 @@
+:root {
+    --container-max: 1100px;
+    --bg: #f8fafc;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Body styles moved to index.css */
+
+.container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.app-header {
+    background: white;
+    border-bottom: 1px solid #eef2f7;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+}
+
+.logo {
+    font-weight: 700;
+    color: #111827;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.nav-link {
+    margin-left: 16px;
+    color: #374151;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.app-footer {
+    text-align: center;
+    padding: 18px 0;
+    color: #6b7280;
+    margin-top: 36px;
+    background: transparent;
+}

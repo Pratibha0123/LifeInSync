@@ -1,0 +1,214 @@
+/* d:\project for all the frontend\React Project All\blog Website\Clients\src\Component\pages\Setting\Setting.css */
+
+.setting {
+    display: flex;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    justify-content: center;
+}
+
+/* Wrapper box */
+.settingWrapper {
+    flex: 3;
+    /* Allows sidebar to take space */
+    max-width: 800px;
+    /* Readability limit */
+    background: #fff;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    height: fit-content;
+}
+
+/* Title section */
+.settingsTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 15px;
+}
+
+.settingsUpdateTitle {
+    font-size: 24px;
+    color: #1f2937;
+    font-weight: 700;
+}
+
+.settingEditBtn {
+    background-color: #f3f4f6;
+    color: #4b5563;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.settingEditBtn:hover {
+    background-color: #e5e7eb;
+    color: #111;
+    transform: translateY(-2px);
+}
+
+/* Profile Picture Section */
+.settingPP {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center image */
+    justify-content: center;
+    margin: 20px 0 40px;
+    position: relative;
+}
+
+.settingImg {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.settingPPIcon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #6366f1;
+    /* Brand color */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    bottom: 5px;
+    /* Offset from bottom */
+    right: calc(50% - 60px);
+    /* Position next to image */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.settingPPIcon:hover {
+    transform: scale(1.1);
+}
+
+/* Form Styles */
+.settingForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.settingForm label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #6b7280;
+    margin-bottom: -10px;
+    /* Tighten up label to input */
+}
+
+/* Input States */
+.settingForm input {
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+.activeInput {
+    border: 1px solid #d1d5db;
+    background-color: #fff;
+    color: #1f2937;
+}
+
+.activeInput:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    outline: none;
+}
+
+.disabledInput {
+    border: 1px solid transparent;
+    background-color: #f9fafb;
+    color: #4b5563;
+    pointer-events: none;
+    /* Make purely read-only feel */
+}
+
+/* Action Buttons */
+.settingActions {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.settingSubmit,
+.settingCancel {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.2s;
+    font-size: 1rem;
+}
+
+.settingSubmit {
+    background-color: #6366f1;
+    color: white;
+    flex: 2;
+}
+
+.settingSubmit:hover {
+    background-color: #4f46e5;
+    transform: translateY(-2px);
+}
+
+.settingCancel {
+    background-color: #ef4444;
+    /* Red for cancel */
+    color: white;
+    flex: 1;
+}
+
+.settingCancel:hover {
+    background-color: #dc2626;
+    transform: translateY(-2px);
+}
+
+.successMsg {
+    color: #10b981;
+    background: #ecfdf5;
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 10px;
+    border: 1px solid #d1fae5;
+}
+
+/* Responsive */
+@media screen and (max-width: 900px) {
+    .setting {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .settingWrapper {
+        width: 100%;
+        max-width: 100%;
+    }
+}

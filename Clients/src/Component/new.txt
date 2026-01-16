@@ -1,0 +1,25 @@
+import React from 'react'
+import './Navbar.css'
+
+
+import {Link} from "react-router-dom"
+import Booking from '../Page/Booking'
+const Navbar = () => {
+  return (
+    <div className='navbarlogo' >
+        <div className="navbar">
+       <p className='logo'><Link to='/home'>𝓦𝓸𝓷𝓭𝓮𝓻 𝓦𝓪𝓿𝓮</Link></p>
+       <ul className='nav-menu'>
+        <li><Link to="/home">Home</Link></li>
+        <li ><Link to="/about">About Us</Link></li>
+        <li ><Link to="/Destination">Destination</Link></li>
+        <li ><Link to="/contact">Contact Us</Link></li> 
+        {/* <button><Link to={<Booking/>}>Go to Book</Link></button> */}
+
+        </ul>
+        </div>
+    </div>
+  )
+}
+
+export default Navbar

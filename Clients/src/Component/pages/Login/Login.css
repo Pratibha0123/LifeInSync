@@ -1,0 +1,177 @@
+/* Scoped to component, relying on index.css for base defaults */
+
+/* Main container */
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    min-height: 100vh;
+    /* Ensure full viewport height */
+    background: linear-gradient(135deg, #eef2ff, #fdf2f8);
+    /* Matching soft indigo/pink theme */
+}
+
+/* Login Card */
+.loginCard {
+    background: rgba(255, 255, 255, 0.85);
+    /* More opaque for better readability */
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 24px;
+    padding: 50px 40px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 20px 50px rgba(99, 102, 241, 0.15);
+    /* Indigo shadow */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.loginCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px rgba(99, 102, 241, 0.2);
+}
+
+/* Title */
+.loginTitle {
+    font-size: 28px;
+    font-weight: 800;
+    color: #1f2937;
+    margin-bottom: 30px;
+}
+
+/* Form */
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.inputGroup {
+    position: relative;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.inputIcon {
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    transform: translateY(-50%);
+    color: #9ca3af;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.loginInput {
+    width: 100%;
+    padding: 15px 15px 15px 50px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    outline: none;
+    font-size: 1rem;
+    color: #374151;
+    background: #f9fafb;
+    transition: all 0.3s ease;
+}
+
+.loginInput:focus {
+    border-color: #6366f1;
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}
+
+.inputGroup:focus-within .inputIcon {
+    color: #6366f1;
+}
+
+/* Buttons */
+.loginButton,
+.loginRegisterButton {
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.loginButton {
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+}
+
+.loginButton:hover {
+    background: linear-gradient(135deg, #4f46e5, #4338ca);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3);
+}
+
+.loginRegisterButtonLink {
+    width: 100%;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+.loginRegisterButton {
+    background: #ec4899;
+    /* Secondary pink */
+    margin-top: 0;
+}
+
+.loginRegisterButton:hover {
+    background: #db2777;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(219, 39, 119, 0.3);
+}
+
+/* Error Message */
+.error {
+    color: #ef4444;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    background: #fee2e2;
+    padding: 8px 12px;
+    border-radius: 8px;
+    width: 100%;
+}
+
+
+/* Responsive Design */
+
+@media screen and (max-width: 768px) {
+    .loginCard {
+        padding: 30px 25px;
+        max-width: 90%;
+    }
+
+    .loginTitle {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .loginCard {
+        padding: 25px 20px;
+    }
+
+    .loginTitle {
+        font-size: 24px;
+    }
+
+    .loginInput {
+        font-size: 14px;
+        padding: 10px 15px 10px 40px;
+    }
+
+    .loginButton,
+    .loginRegisterButton {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

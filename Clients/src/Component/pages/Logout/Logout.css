@@ -1,0 +1,112 @@
+/* Modern Logout Page Design */
+
+.logout-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #d9e4ff, #f9f9ff);
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+}
+
+
+/* Glassmorphism Card */
+
+.logout-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    border-radius: 18px;
+    padding: 50px 40px;
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.logout-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+
+.logout-message {
+    font-size: 17px;
+    color: #444;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+
+/* Buttons */
+
+.logout-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.logout-btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.logout-btn.primary {
+    background: linear-gradient(135deg, #009688, #00695c);
+    color: #fff;
+}
+
+.logout-btn.primary:hover {
+    background: linear-gradient(135deg, #00bfa5, #004d40);
+    transform: translateY(-2px);
+}
+
+.logout-btn.secondary {
+    background: #f1f1f1;
+    color: #333;
+}
+
+.logout-btn.secondary:hover {
+    background: #e0e0e0;
+    transform: translateY(-2px);
+}
+
+
+/* Animation */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Responsive */
+
+@media screen and (max-width: 480px) {
+    .logout-card {
+        padding: 35px 25px;
+    }
+    .logout-title {
+        font-size: 26px;
+    }
+    .logout-message {
+        font-size: 15px;
+    }
+    .logout-btn {
+        padding: 10px 18px;
+        font-size: 15px;
+    }
+}

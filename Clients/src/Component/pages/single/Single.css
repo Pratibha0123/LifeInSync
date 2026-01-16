@@ -1,0 +1,103 @@
+.single {
+    display: grid;
+    grid-template-columns: 2.2fr 1fr;
+    gap: 40px;
+    max-width: 1300px;
+    margin: 40px auto;
+    padding: 20px 40px;
+    background: linear-gradient(135deg, #fafafa, #f3f7fc);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    animation: fadeIn 1s ease-in-out;
+}
+
+
+/* Main Post Section */
+
+.singleMain {
+    background: #fff;
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    animation: slideInLeft 0.8s ease forwards;
+}
+
+
+/* Sidebar Section */
+
+.singleSidebar {
+    background: #fff;
+    border-radius: 14px;
+    padding: 25px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    animation: slideInRight 0.8s ease forwards;
+}
+
+
+/* Hover glow */
+
+.singleMain:hover,
+.singleSidebar:hover {
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Animations */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* Responsive design */
+
+@media screen and (max-width: 1024px) {
+    .single {
+        grid-template-columns: 1.8fr 1fr;
+        gap: 25px;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .single {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 20px;
+    }
+    .singleMain,
+    .singleSidebar {
+        padding: 20px;
+    }
+}
